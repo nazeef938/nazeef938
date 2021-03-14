@@ -1,0 +1,25 @@
+def binarysearch(list,low,high,x):
+  if(low<high):
+    mid=(low+high)//2
+    if(list[mid]==x):
+      return mid
+    elif(list[mid]>x):
+      return binarysearch(list,l,mid-1,x)
+     else:
+      return binarysearch(list,mid+1,high,x)
+  else:
+    return -1
+
+n=int(input("enter the size of the list="))
+item=int(input("enter the element to be searched="))
+list=[]
+for i in range(0,n):
+  ele=int(input())
+  list.append(ele)
+list.sort()
+result=binarysearch(list,0,n-1,item)
+if result!=-1:
+  print("Element is found at=",result)
+else:
+  print("Element doesnot find")
+  
