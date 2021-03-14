@@ -17,6 +17,8 @@ for i in range(0,n):
   ele=int(input())
   list.append(ele)
 list.sort()
+print("Sorted list=")
+print(list)
 result=binarysearch(list,0,n-1,item)
 if result!=-1:
   print("Element is found at=",result)
